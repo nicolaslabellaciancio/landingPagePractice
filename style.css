@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #EAEFF6;
+    font-family: 'Comfortaa', cursive;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #2E54A5;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: auto 95%;
+}
+
+#header-img {
+    width: 50px;
+    background-color: #EAEFF6;
+    padding: 14px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list-item {
+    list-style: none;
+    margin: 0 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-list-item:hover {
+    transform: scale(1.04);
+}
+
+li a {
+    text-decoration: none;
+    color: #EAEFF6;
+    font-size: 1.1em;
+    opacity: 0.85;
+    transition: all 0.4s;
+}
+
+li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: .13em;
+    background: #EAEFF6;
+    transition: width .4s;
+    margin-top: 6px;
+    margin-bottom: -6px;
+}
+
+li a:hover {
+    opacity: 1;
+}
+
+li a:hover::after {
+    width: 105%;
+    transition: width .4s;
+}
+
+.title {
+    background: linear-gradient(45deg, rgba(0,119,213,1) 0%, rgba(91,182,253,1) 50%, rgb(29, 134, 255) 100%); 
+    color: #EAEFF6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 330px;
+}
+
+h1 {
+    font-size: 6em;
+    font-weight: 600;
+    padding: 30px;
+    text-shadow: 3px 4px 10px rgb(0, 69, 148)
+}
+
+.title p {
+    font-size: 2.2em;
+    padding-bottom: 30px;
+    text-shadow: 1px 1px 3px rgb(1, 62, 133);
+
+}
+
+.features {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.features img {
+    width: 100px;
+}
+
+.feature {
+    display: flex;
+    margin-bottom: 2em;
+    width: 75vw;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #464e5b;
+    margin-left: 2em;
+}
+
+.feature-text {
+    padding-left: 2em;
+    line-height: 1.5em;
+    color: #464e5b;
+    font-weight: 600;
+}
+
+.feature:nth-child(2) {
+    align-self: flex-end;
+    margin-right: 2em;
+    margin-left: 0;
+}
+
+.feature-text h3 {
+    font-size: 1.5em;
+    padding: 10px 0;
+    color: #3f4652;
+}
+
+.feature-text p {
+    font-size: 1.05em;
+}
+
+.membership-section {
+    background-color: #2e54a5;
+    color: #EAEFF6;
+    padding: 2em;
+    text-align: center;
+}
+
+.video > h2 {
+    font-size: 2.5em;
+    margin-top: .2em;
+    margin-bottom: .7em;
+}
+
+.video iframe {
+    border: 4px solid #EAEFF6;
+    border-radius: 5px;
+    margin-bottom: 2em;
+}
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 350px));
+    grid-gap: 5vw;
+    justify-content: center;
+}
+
+.membership-card {
+    background-color: #EAEFF6;
+    border: 3px solid #EAEFF6;
+    border-radius: 8px;
+    color: #3f4652;    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.membership-card h2 {
+    padding-top: 20px;
+    font-size: 1.9em;
+    align-self: center;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+.membership-card h2::after {
+    content: '';
+    display: block;
+    width: 150%;
+    margin-left: -25%;
+    padding-top: 5px;
+    border-bottom: 2px solid #3f4652;
+}
+
+.membership-card p {
+    margin: 10px 20px 0 20px;
+}
+
+.membership-card li {
+    line-height: 2em;
+    margin: 10px 0 0 2em;
+    padding-left: .2em;
+}
+
+.price {
+    background-color: #3f4652;
+    color: rgb(255, 233, 38) ;
+    width: 100%;
+    border-radius: 10px;
+    padding: .7em 0;
+    align-self: center;
+    font-size: 1.6em;
+    cursor: pointer;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: 1.9em;
+    margin: 20px;
+    color: #3f4652;
+    font-weight: 600;
+}
+
+form {
+    width: 80%;
+    background-color: #3f4652;
+    padding: 2.5em 1em;
+    border-radius: 10px;
+    color: #EAEFF6;
+    font-weight: 500;
+}
+
+.email {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.email label {
+    margin-right: 20px;
+}
+
+#email {
+    text-align: center;
+    width: 40%;
+    outline: none;
+    border: none;
+    background-color: #EAEFF6;
+    padding: 8px 0;
+    font-size: 1em;
+    font-family: 'Comfortaa', cursive;
+    color: #3f4652;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+.submit {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    display: block;
+    margin: auto;
+    background-color: #EAEFF6;
+    padding: 12px 20px;
+    font-size: 1em;
+    font-family: 'Comfortaa', cursive;
+    color: #3f4652;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #3f4652;
+    margin-top: 1em;
+    padding: 1.5em 0;
+    text-align: center;
+    color: #EAEFF6;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 100%;
+        padding: 15px 0;
+    }
+
+    #header-img {
+        display: none;
+    }
+
+    .title {
+        height: 280px;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    .title p {
+        font-size: 1.4em;
+    }
+
+    .feature {
+        margin-bottom: 2em;
+        width: 90vw;
+        /* margin-left: 2em; */
+    }
+    
+    .feature-text {
+        padding-left: 2em;
+    }
+    
+    .feature:nth-child(2) {
+        align-self: flex-start;
+        margin-left: 2em;
+    }
+    
+    .feature-text h3 {
+        font-size: 1.3em;  
+    }
+    
+    .feature-text p {
+        font-size: 1em;
+        padding-bottom: 20px;
+    }
+
+    form {
+        width: 95%;
+        padding: 2.5em 0;
+    }
+    
+    .email {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+    #email {
+        width: 60%;
+    }
+}
